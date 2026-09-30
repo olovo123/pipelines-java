@@ -22,5 +22,6 @@ steps:
     goals: 'package'
 - task: PublishCodeCoverageResults@2
   inputs:
-    summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/site/jacoco/jacoco.xml" # Path to summary files
-    failIfCoverageEmpty: true # Fail if code coverage results are missing
+    summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/site/jacoco/jacoco.xml"
+    pathToSources: "$(System.DefaultWorkingDirectory)/src/main/java"
+    failIfCoverageEmpty: true
